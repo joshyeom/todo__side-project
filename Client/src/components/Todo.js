@@ -1,11 +1,15 @@
-const Todo = (props) => {
-  const { todo } = props;
-  const { id, title, done } = todo;
+const Todo = ({ item }) => {
   return (
-    <>
-      <input type="checkbox" value={id} id={id} defaultChecked={done} />
-      <label htmlFor={id}>{title}</label>
-    </>
+    <div className="Todo">
+      <input
+        type="checkbox"
+        id={`todo${item.id}`}
+        name={`todo${item.id}`}
+        value={`todo${item.id}`}
+        defaultChecked={item.done}
+      />
+      <label htmlFor={`todo${item.id}`}>{item.title}</label>
+    </div>
   );
 };
 
