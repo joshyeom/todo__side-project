@@ -9,14 +9,20 @@ const AddTodo = ({ addItem }) => {
 
   const onButtonClick = () => {
     // props로 받아온 addItem 함수 실행
-    addItem(todoItem); // {title: 'input입력값'}
-    setTodoItem({ title: "" }); // input 초기화
+    if (todoItem.title == "") {
+      alert("투두를 작성하세요");
+    } else {
+      addItem(todoItem); // {title: 'input입력값'}
+      setTodoItem({ title: "" }); // input 초기화
+    }
   };
 
   const onKeyPress = (e) => {
-    if (e.key == "Enter") {
+    if (e.key == "Enter" && todoItem.title !== "") {
       addItem(todoItem);
       setTodoItem({ title: "" });
+    } else if (e.key == "Enter" && todoItem.title == "") {
+      alert("투두를 작성하세요");
     }
   };
 

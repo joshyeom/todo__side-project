@@ -17,7 +17,7 @@ const App = () => {
     {
       id: 3,
       title: "My Todo3",
-      done: true,
+      done: false,
     },
   ]);
   const todoId = useRef(4);
