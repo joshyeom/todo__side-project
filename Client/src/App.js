@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import AddTodo from "./components/AddTodo";
 import Todo from "./components/Todo";
-import AppCss from "./css/App.css";
+import "./css/App.css";
 
 const App = () => {
   const [todoItems, setTodoItems] = useState([
@@ -66,12 +66,14 @@ const App = () => {
   const [BGColor, setBGColor] = useState({
     backgroundImage: colorUnite[parseInt(colorUnite.length * Math.random())],
   });
+
   const setBg = () => {
     setBGColor({
       backgroundImage: colorUnite[parseInt(colorUnite.length * Math.random())],
     });
     document.body.style.background = `${BGColor.backgroundImage}`;
   };
+
   document.body.style.background = `${BGColor.backgroundImage}`;
   return (
     <div className="App">

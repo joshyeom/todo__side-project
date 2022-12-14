@@ -1,5 +1,7 @@
 import { useState } from "react";
-import AddTodoCss from "../css/AddTodo.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import "../css/AddTodo.css";
 
 const AddTodo = ({ addItem }) => {
   // 사용자 입력을 저장할 객체
@@ -30,13 +32,16 @@ const AddTodo = ({ addItem }) => {
   return (
     <div className="AddTodo">
       <input
+        autoFocus
         type="text"
         placeholder="Add your new Todo"
         value={todoItem.title}
         onKeyPress={onKeyPress}
         onChange={(e) => setTodoItem({ title: e.target.value })}
       />
-      <button onClick={onButtonClick}>ADD</button>
+      <button onClick={onButtonClick}>
+        <FontAwesomeIcon icon={faPlus} />
+      </button>
     </div>
   );
 };
