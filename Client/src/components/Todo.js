@@ -1,4 +1,5 @@
 import { useState } from "react";
+import TodoCss from "../css/Todo.css";
 
 const Todo = ({ item, deleteItem }) => {
   // console.log(item); // { id: 1, title: 'todo1', done: false, }

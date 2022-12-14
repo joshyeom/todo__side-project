@@ -1,0 +1,29 @@
+.Todo {
+  padding: 8px 24px;
+  display: flex;
+}
+.Todo input[type=checkbox] {
+  width: 24px;
+  height: 24px;
+  margin: auto 0;
+}
+.Todo input[type=text] {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(240, 240, 240);
+  padding: 12px 8px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.Todo input[type=text]:focus {
+  outline: none;
+}
+.Todo button {
+  padding: 0 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgb(240, 240, 240);
+  color: rgb(69, 69, 69);
+  cursor: pointer;
+}
