@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import "../css/AddTodo.css";
+import "../sass/AddTodo.scss";
 
 const AddTodo = ({ addItem }) => {
   // 사용자 입력을 저장할 객체

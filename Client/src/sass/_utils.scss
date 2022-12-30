@@ -1,27 +1,4 @@
-
-@mixin button($bg-color, $color) {
-    padding: 0 16px;
-    border-radius: 6px;
-    border: none;
-    background-color: $bg-color;
-    color: $color;
-    cursor: pointer;
-  }
-  
-  @mixin input($border-color) {
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid $border-color;
-    padding: 12px 8px;
-  
-    &:focus {
-      // focus 될 때 발생하는 outline 효과 없애기
-      outline: none;
-    }
-  }
-
-  // 여러 파일에서 사용되는 sass 변수 및 mixin
+// 여러 파일에서 사용되는 sass 변수 및 mixin
 
 // COLOR
 $color-primary-400: rgb(82, 140, 255);
@@ -38,7 +15,6 @@ $width-md: 680px;
   padding: 0 16px;
   border-radius: 6px;
   border: none;
-  background-color: $bg-color;
   color: $color;
   cursor: pointer;
 }
@@ -54,10 +30,4 @@ $width-md: 680px;
     // focus 될 때 발생하는 outline 효과 없애기
     outline: none;
   }
-}
-
-@mixin notice() {
-  color: $color-secondary-300;
-  font-size: 14px;
-  font-weight: 500;
 }
